@@ -1,0 +1,94 @@
+@use "./variables";
+
+* {
+  font-family: variables.$spaceGrotesk;
+}
+
+.unkai-yt {
+  &-container {
+    width: 500px;
+    height: 100vh;
+    background-color: variables.$warm;
+    position: fixed;
+    z-index: 10203;
+    right: -500px;
+    top: 0;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: variables.$warm;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: variables.$green;
+    }
+
+    &.open {
+      transition: 0.2s ease-in-out;
+      right: 0;
+    }
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    background-color: variables.$green;
+    left: -41px;
+    top: 60px;
+    cursor: pointer;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    svg {
+      stroke: variables.$dark;
+    }
+  }
+
+  &-content {
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 20px;
+      background-color: variables.$green;
+      &-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        svg {
+          stroke: variables.$warm;
+          cursor: pointer;
+          width: 18px;
+        }
+        &-icons {
+          display: flex;
+          gap: 5px;
+        }
+      }
+    }
+
+    &-inner {
+      padding: 20px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      &-inputs {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+      }
+    }
+  }
+}

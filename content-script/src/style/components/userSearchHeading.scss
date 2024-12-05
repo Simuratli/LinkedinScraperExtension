@@ -1,0 +1,27 @@
+@use "../variables";
+
+.userSearchHeading {
+  width: 100%;
+  padding: 40px 20px 20px 20px;
+  background-color: variables.$green;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  h1 {
+    color: variables.$dark;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  svg {
+    stroke: variables.$dark;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 15px;
+  }
+}

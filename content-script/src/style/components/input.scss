@@ -1,0 +1,62 @@
+@use "../variables"; // Import any shared variables, if applicable
+
+.unkai-floating-label-input {
+  position: relative;
+  width: 100%; // Full width by default
+  margin: 1rem 0;
+
+  &__field {
+    width: 100%;
+    padding: 15px !important;
+    border: 1px solid variables.$dark !important;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    color: variables.$dark !important;
+    outline: none !important;
+
+    &:focus + .unkai-floating-label-input__label,
+    &:not(:placeholder-shown) + .unkai-floating-label-input__label {
+      top: -15px; // Float the label above
+      left: 10px; // Align left properly
+      font-size: 12px; // Shrink label font size
+      color: variables.$dark; // Change label color
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 3px; // Centered by default
+    left: 15px;
+    transform: translateY(-50%);
+    color: variables.$dark;
+    font-size: 16px;
+    pointer-events: none; // Prevent label interaction
+    background: variables.$warm; // Match input background for better visibility
+    padding: 0 5px; // Padding for the label background
+    transition: all 0.3s ease; // Smooth transition for floating effect
+  }
+}
+
+.unkai-floating-label-textarea {
+  height: 150px;
+}
+
+textarea {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: variables.$warm;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: variables.$green;
+  }
+
+  resize: none;
+}

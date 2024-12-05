@@ -1,0 +1,7 @@
+@use "../variables";
+
+.header {
+  font-size: 20px;
+  font-weight: bold;
+  color: variables.$dark;
+}

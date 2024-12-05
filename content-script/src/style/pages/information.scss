@@ -1,0 +1,52 @@
+@use "../variables.scss";
+
+.informationPage {
+  padding: 20px;
+  &__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    h1 {
+      font-size: 20px;
+      color: variables.$dark;
+      font-weight: bolder;
+    }
+
+    &__icon {
+      svg {
+        width: 50px;
+        height: 50px;
+        stroke: variables.$yellow;
+      }
+    }
+  }
+
+  &__content {
+    p {
+      color: variables.$dark;
+      text-align: center;
+      span {
+        color: variables.$yellow;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 40%;
+      height: 120px;
+      object-fit: cover;
+      object-position: center;
+      cursor: pointer;
+    }
+  }
+}

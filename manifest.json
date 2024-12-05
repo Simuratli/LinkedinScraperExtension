@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "name": "Unkai Linkedin Scraper",
+  "description": "Unkai LinkedIn Scraper: A powerful tool for quickly collecting LinkedIn profile data, ideal for recruiters and analysts",
+  "short_name": "U-Scraper",
+  "author": "Eljan Simuratli",
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "host_permissions": ["https://www.linkedin.com/*"],
+  "permissions": ["tabs", "webNavigation", "cookies"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "images/uscrapericon.png",
+    "48": "images/uscrapericon.png",
+    "128": "images/uscrapericon.png"
+  }
+}
